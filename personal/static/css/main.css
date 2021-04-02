@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(47, 47, 47);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    color: rgb(250, 232, 232);
+    height: 100%;
+}
+
+.grid {
+    width: 50%;
+    display: grid;
+    grid-template-rows: repeat( [row-inicio] 50px [row-fin]);
+    grid-template-columns: repeat(2, [col-inicio] 1fr [col-end]) ;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.element {  
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgb(226, 225, 225);
+    color:rgb(82, 0, 0);
+    text-align: center;
+}
+
+.element.casilla{
+    width: 200px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+
+}
+
+.ocuppied{
+    background-color: rgb(255, 124, 124);
+}
+
+.free{
+    background-color: rgb(243, 243, 243);
+}
+
+.selected{
+    background-color: rgb(124, 255, 141);
+}
+
+.element.hor {
+    border-style: solid;
+    border-color: rgb(82, 0, 0);
+}
+
+.casilla:active {
+    background-color: rgb(84, 241, 155);
+}
+.casilla:visited {
+    background-color: rgb(0, 66, 30);
+}
+
+
+.titulo {
+    font-size: xx-large;
+}
+
+a {
+    color:rgb(174, 125, 207);
+}
+
+a:hover {
+    color:rgb(152, 65, 209);
+}
+
+.boton {
+    
+}

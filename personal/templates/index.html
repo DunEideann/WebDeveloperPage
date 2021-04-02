@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Samuel Reyes - Desarrollador de Software Junior</title>
+        <link rel="icon" type="image/x-icon" href="../static/assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Samuel Reyes</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Acerca de mí</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portafolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Intereses</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                
+                <div class="resume-section-content">
+                    {% for message in get_flashed_messages() %}
+                    <div class="alert alert-warning">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    <h1 class="mb-0">
+                        Samuel
+                        <span class="text-primary">Reyes Elgueta</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Desarrollador de Software, Chile.
+                        <!-- <a href="mailto:name@email.com">name@email.com</a> -->
+                    </div>
+                    <p class="lead mb-5">Soy Desarrollador de Software Junior, con formación autodidacta en Python y algunos de sus Frameworks,
+                         con un enfoque en el trabajo colaborativo e investigativo para la solución de problemas. </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/samuel-reyes-elgueta/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/DunEideann/SamuelPublicProjects"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://twitter.com/SamuelRElgueta"><i class="fab fa-twitter"></i></a>
+                        <!-- <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a> -->
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experiencia</h2>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Desarrollador de Software</h3>
+                            <div class="subheading mb-3">Autodidacta</div>
+                            <p>Desempeñandome en el desarrollo de aplicaciones, web y scrips en Python.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Marzo 2020 - Present</span></div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Desarrollador de Software</h3>
+                            <div class="subheading mb-3">SpellShot Games</div>
+                            <p>Parte de una pequeña comunidad formada para el desarrollo de videojuegos sin fines de lucro y con el ánimo de aprender del rubro,
+                                 donde me desempeñe como Desarrollador de Videojuegos y además Desarrollador Web para la página de la comunidad. </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Mayo 2020 - Enero 2020</span></div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Docente de Física</h3>
+                            <div class="subheading mb-3">Universidad de La Serena</div>
+                            <p>Jugué un rol como Docente en el área de Física, dictando clases y laboratorios en Mecánica, Ondas, Electromagnetismo y Física Moderna.
+                                 Donde hacia uso de la programación para resolver algunos problemas Matemáticos y Físicos.   </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2017 - Marzo 2020 (Intermitente)</span></div>
+                    </div>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Educación</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Universidad de La Serena</h3>
+                            <div class="subheading mb-3">Licenciatura en Ciencias con Mención en Física</div>
+                            <div>Línea de la Física Aplicada y Física Teórica.
+                                Además tomando electivos de programación aplicada a la física, trabajando en el lenguaje IDL/GDL.
+                            </div>
+                            <p></p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Marzo 2011 - Junio 2015</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Universidad de La Serena</h3>
+                            <div class="subheading mb-3">Magíster en Ciencias Físicas</div>
+                            <div>Desarrollando mi especialidad y trabajo de Tesis en Gravedad Teleparalela.
+                                Donde además aprendí el uso del lenguaje fortran95 para el curso de Métodos Numéricos Aplicados.
+                            </div>
+                            <p></p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Abril 2016 - Julio 2019</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Habilidades</h2>
+                    <div class="subheading mb-3">Lenguajes de Programación y Herramientas</div>
+                    <!-- <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fas fa-flask"></i></li>
+                        <li class="list-inline-item"><i class="fas fa-django"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul> -->
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Python
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Flask
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Django
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Kivy
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            GameMaker Language(GML)
+                        </li>
+                    </ul>
+                    <div class="subheading mb-3">Idiomas</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Español, Idioma Nativo
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Ingles, Nivel C1
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Alemán, Nivel A1
+                        </li>
+                    </ul>
+                    <div class="subheading mb-3">Certificados</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Udemy, Python Sin Fronteras: HTML, CSS, Flask y MySQL
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Desarrollador de Videojuegos, Curso Online SENCE
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Lógica de Programación, Curso Online SENCE
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Introducción a Machine Learning Ed3, Curso Online SENCE
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Portafolio? Extras?-->
+            <section class="resume-section" id="portafolio">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Portafolio</h2>
+
+                    <ul class="fa-ul mb-0">
+                        <p>GitHub:</p>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="https://github.com/DunEideann/SamuelPublicProjects">Mi Github con el código mostrado en esta pagina</a>
+                        </li>
+                        <br>
+                        <p>Página de Spellshot Games:</p>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="http://spellshotgames.herokuapp.com/">Página de videojuegos en Python+Django+AWS</a>
+                        </li>
+                        <p>Juego "Coronawars":</p>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="https://ssonline.itch.io/corona-wars/">Juego Top-Down Shooter (Sin fines de lucro)</a>
+                        </li>
+                    </br>
+                        <p>Mini Scripts:</p>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="/problema1/">Seleccionador cuadro de recursos</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="/problema2/">Solución a acertijo:"3 Amigos con 1 Motocicleta"</a>
+                        </li>
+                       
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="/problema3">Cálculo spawn Heraldo en League of Legends</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-jedi text-warning"></i></span>
+                            <a href="/problema4">Multiplicación sin usar símbolo de multiplicación</a>
+                        </li>
+                        <!-- <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            3
+                            <sup>rd</sup>
+                            Place - James Buchanan High School - Hackathon 2005
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Intereses</h2>
+                    <p>Aparte de mi interes en el desarrollo de software, tengo interes por las ciencias, especialmente por la física,
+                         donde disfruto de aprender o conversar de cualquier tema que me parezca interesante.</p>
+                    <p class="mb-0">En mi tiempo libre dedico gran parte de mi tiempo a hobbies indoor,
+                         como lo son los videojuegos (tanto single player como multiplayer de PC y consola), libros de género fantasía,
+                          las series, películas, a la cocina y al deporte.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Contacto-->
+            <section class="resume-section contact1" id="contact">
+                <div class="resume-section-content contact2">
+                    <h2 class="mb-5 contact">Contacto</h2>
+                    {% if success %}
+                        <p>Gracias por su mensaje, me pondré en contacto lo más pronto posible.</p>
+                    {% else %}
+                        {% for message in form.name.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
+                        
+                        {% for message in form.email.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
+                        
+                        {% for message in form.subject.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
+                        
+                        {% for message in form.message.errors %}
+                            <div class="flash">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                    <form class="formulario" action="{{ url_for('models.contact') }}" method=post>
+                   
+                        {{ form.csrf_token }}
+
+                        {{ form.name.label }}<br>
+                        {{ form.name }}<br>
+                        
+                        {{ form.email.label }}<br>
+                        {{ form.email }}<br>
+                       
+                        {{ form.subject.label }}<br>
+                        {{ form.subject }}<br>
+                       
+                        {{ form.message.label }}<br>
+                        {{ form.message }}<br>
+                       
+                        {{ form.submit }}
+                    </form>
+
+                </div>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
