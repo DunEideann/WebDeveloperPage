@@ -518,7 +518,7 @@ def contact():
             return render_template('contact.html', form=form)
 
         else:
-            msg = Message(form.subject.data, sender='dev.sre.sender@gmail.com', recipients=['samuelrys.dev@gmail.com'])
+            msg = Message(form.subject.data, sender=os.environ.get("SEND_USERNAME"), recipients=[os.environ.get("RECEIVE_USERNAME")])
             msg.body = """
             From: %s <%s>
             %s
