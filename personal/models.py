@@ -408,10 +408,11 @@ def multiplicador():
         numbers_1 = float_numero_1.split(".")
         decimals_1 = len(numbers_1[1])
         noDec1 = int(numbers_1[0] + numbers_1[1])
-        #Variables for number 1
-        numbers_2 = str(numero_2).split(".")
-        decimals_2 = len(str(numero_2).split(".")[1])
-        noDec2 = int(str(numero_2).split(".")[0] + str(numero_2).split(".")[1])
+        #Variables for number 2
+        float_numero_2 = str(numero_2)
+        numbers_2 = float_numero_2.split(".")
+        decimals_2 = len(numbers_2[1])
+        noDec2 = int(numbers_2[0] + numbers_2[1])
 
         #Now we use an if statement to do the shorter loop and save resources
         if decimals_1>decimals_2:
@@ -430,14 +431,19 @@ def multiplicador():
             
             #We transform decimalResult to the real value we need
             decimalResultStr = str(decimalResult)
-            vecesCorrerPunto = decimals_1 + decimals_2 
+            decimalResultLen = len(str(decimalResult))
+            vecesCorrerPunto = decimals_1 + decimals_2
+            puntoToRight = decimalResultLen-vecesCorrerPunto
+                        
+            if puntoToRight==0:
+                decimalResultStr = "0." + decimalResultStr
+            elif puntoToRight>0:
+                decimalResultStr = decimalResultStr[0:puntoToRight]+"."+decimalResultStr[puntoToRight:]
 
             while(vecesCorrerPunto > len(decimalResultStr)):
                 decimalResultStr = "0" + decimalResultStr
-                #print("I'm in while")
             
-            decimalResultStr = "0." + decimalResultStr
-            decimalResult = float(decimalResultStr)*10
+            decimalResult = float(decimalResultStr)
             result += decimalResult
             
         else:
@@ -456,14 +462,19 @@ def multiplicador():
             
             #We transform decimalResult to the real value we need
             decimalResultStr = str(decimalResult)
-            vecesCorrerPunto = decimals_1 + decimals_2 
-            
+            decimalResultLen = len(str(decimalResult))
+            vecesCorrerPunto = decimals_1 + decimals_2
+            puntoToRight = decimalResultLen-vecesCorrerPunto
+                        
+            if puntoToRight==0:
+                decimalResultStr = "0." + decimalResultStr
+            elif puntoToRight>0:
+                decimalResultStr = decimalResultStr[0:puntoToRight]+"."+decimalResultStr[puntoToRight:]
+
             while(vecesCorrerPunto > len(decimalResultStr)):
                 decimalResultStr = "0" + decimalResultStr
             
-            decimalResultStr = "0." + decimalResultStr
-            decimalResult = float(decimalResultStr)*10
-
+            decimalResult = float(decimalResultStr)
             result += decimalResult
 
     elif oneFloatCondition:
@@ -471,11 +482,9 @@ def multiplicador():
         if type(numero_1)==int:
             for i in range(numero_1):
                 result += numero_2 
-                print(f"1 float 1 n1:{numero_1} y n2:{numero_2}")
         else:
             for i in range(numero_2):
                 result += numero_1
-                print(f"1 float 2 n1:{numero_1} y n2:{numero_2}")
 
     else:
         error = "Error desconocido"
