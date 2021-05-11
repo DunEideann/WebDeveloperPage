@@ -140,7 +140,6 @@ def delMoto(key):
 @bp.route('/problema1/<string:nombre>/', methods=['POST'])
 def selectPerson(nombre):
     personaActual = nombre
-    print(f"La persona actual es {personaActual}")
 
     return render_template('problema1.html', informacion=informacion, personas=personas, personaActual=personaActual)
 
@@ -149,13 +148,11 @@ def assignSlot(estado):
     if estado == None:
         estado = "Free"
     ocupacion = estado
-    print(ocupacion)
     return ocupacion
 
 
 @bp.route('/problema1/<string:personaActual>/take/<int:hora>/', methods=['POST'])
 def take(personaActual, hora):
-    print(f"Entre a take con hora {hora}")
     estado = "Selected"
     personas[personaActual][hora][0] = assignSlot(estado)
     addMoto(hora)
@@ -167,8 +164,6 @@ def take(personaActual, hora):
 def drop(personaActual, hora):
     estado = "Free"
     personas[personaActual][hora][0] = assignSlot(estado)
-    print("Entre a drop")
-    print(f"Drop: {personas[personaActual][hora]}")
     delMoto(hora)
     
     return redirect(url_for('models.index'))
@@ -264,7 +259,6 @@ def calculo():
         persona3NotArrive = True
         llevandoPersona3 = False
         # Forma 2
-        print(distanciaIterada)
 
         # Aca empiezo el ciclo
         while(count < 3):
@@ -399,8 +393,7 @@ def multiplicador():
     if bothIntCondition:
         aux = True #Variable used to know in what condition did we enter
         for i in range(numero_1):
-            result += numero_2
-            print(f"2 int n1:{numero_1} y n2:{numero_2}")  
+            result += numero_2 
             
     elif bothFloatCondition:
         aux = True
